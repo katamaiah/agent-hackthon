@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgentQA 007: Intelligent Automation Lifecycle</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+        }
+        .flow-card {
+            background-color: white;
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e2e8f0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            min-height: 180px;
+            justify-content: center;
+        }
+        .flow-icon {
+            font-size: 2.5rem;
+            margin-bottom: 0.75rem;
+            color: #0C4A6E;
+        }
+        .flow-arrow {
+            font-size: 2.5rem;
+            color: #94a3b8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 1rem 0;
+        }
+        .agent-card {
+            background: linear-gradient(135deg, #0C4A6E, #0EA5E9);
+            color: white;
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 1rem;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+            border: 4px solid white;
+        }
+        .aws-bedrock-logo {
+            font-size: 0.75rem;
+            font-weight: bold;
+            background-color: rgba(255, 255, 255, 0.9);
+            color: #e67e22;
+            padding: 2px 6px;
+            border-radius: 9999px;
+            margin-top: 0.5rem;
+        }
+    </style>
+</head>
+<body class="antialiased text-slate-800">
+
+    <header class="text-center py-12 px-4">
+        <h1 class="text-4xl md:text-5xl font-extrabold text-[#0C4A6E] tracking-tight">AgentQA 007: Intelligent Automation Lifecycle</h1>
+        <p class="mt-4 text-lg md:text-xl text-[#0EA5E9] font-medium">Powered by AWS Bedrock</p>
+    </header>
+
+    <main class="container mx-auto p-4 md:p-8">
+        <div class="grid grid-cols-1 lg:grid-cols-11 gap-8 items-center">
+            
+            <div class="lg:col-span-5">
+                <h2 class="text-2xl font-bold text-center text-[#22C55E] mb-6">Phase 1: Intelligent Test Case Generation</h2>
+                <div class="space-y-4">
+                    <div class="flow-card">
+                        <div class="flow-icon">&#128187;</div>
+                        <h3 class="font-bold">Step 1: User Story Input</h3>
+                        <p class="text-sm text-slate-600 mt-1">BA provides a feature description or user story via the Dashboard UI.</p>
+                    </div>
+
+                    <div class="flow-arrow">&#8595;</div>
+
+                    <div class="flow-card">
+                        <div class="flow-icon">&#955;</div>
+                        <h3 class="font-bold">Step 2: Trigger Agent (via Lambda)</h3>
+                        <p class="text-sm text-slate-600 mt-1">An AWS Lambda function is invoked to initiate the test case generation process.</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="lg:col-span-1 hidden lg:flex flex-col items-center justify-around h-full">
+                 <div class="flow-arrow h-1/2">&#8594;</div>
+                 <div class="flow-arrow h-1/2">&#8592;</div>
+            </div>
+
+            <div class="lg:col-span-5 order-first lg:order-none">
+                <div class="flex justify-center items-center my-8 lg:my-0">
+                    <div class="agent-card">
+                        <div class="text-3xl">&#129302;</div>
+                        <h3 class="font-extrabold text-xl mt-2">AgentQA 007</h3>
+                        <div class="aws-bedrock-logo">AWS Bedrock</div>
+                    </div>
+                </div>
+                <p class="text-center text-slate-600 font-semibold mt-4 p-4 bg-sky-100/50 rounded-lg">
+                    AI Agent Orchestrates: Test Case Design, Test Data, Test Execution, & Results Reporting.
+                </p>
+            </div>
+        </div>
+
+        <div class="flex justify-center my-8">
+            <div class="flow-arrow text-4xl transform lg:rotate-90">&#8611;</div>
+        </div>
+        
+        <div class="grid grid-cols-1 lg:grid-cols-11 gap-8 items-center">
+            <div class="lg:col-span-5">
+                 <div class="space-y-4">
+                     <div class="flow-card">
+                        <div class="flow-icon">&#128190;</div>
+                        <h3 class="font-bold">Step 4: Store Test Cases (DynamoDB)</h3>
+                        <p class="text-sm text-slate-600 mt-1">Generated test cases are structured and saved to an Amazon DynamoDB table.</p>
+                    </div>
+                    <div class="flow-arrow">&#8595;</div>
+                     <div class="flow-card">
+                        <div class="flow-icon">&#9654;</div>
+                        <h3 class="font-bold">Step 5: Initiate Test Run</h3>
+                        <p class="text-sm text-slate-600 mt-1">From the UI, the BA triggers the automated test execution for the desired feature.</p>
+                    </div>
+                 </div>
+            </div>
+
+             <div class="lg:col-span-1 hidden lg:flex flex-col items-center justify-around h-full">
+                 <div class="flow-arrow h-1/2">&#8594;</div>
+                 <div class="flow-arrow h-1/2">&#8592;</div>
+            </div>
+
+            <div class="lg:col-span-5">
+                 <h2 class="text-2xl font-bold text-center text-[#22C55E] mb-6">Phase 2: Automated Test Execution</h2>
+                 <div class="space-y-4">
+                      <div class="flow-card">
+                        <div class="flow-icon">&#955;</div>
+                        <h3 class="font-bold">Step 6: Trigger Agent (via Lambda)</h3>
+                        <p class="text-sm text-slate-600 mt-1">A second Lambda function is invoked, instructing the agent to execute tests.</p>
+                    </div>
+                    <div class="flow-arrow">&#8595;</div>
+                    <div class="flow-card">
+                        <div class="flow-icon">&#128273;</div>
+                        <h3 class="font-bold">Step 7: Execute & Report</h3>
+                        <p class="text-sm text-slate-600 mt-1">AgentQA reads from DynamoDB, discovers the services, runs tests, and compiles the results.</p>
+                    </div>
+                    <div class="flow-arrow">&#8595;</div>
+                     <div class="flow-card bg-emerald-100 border-emerald-300">
+                        <div class="flow-icon text-emerald-600">&#128202;</div>
+                        <h3 class="font-bold text-emerald-800">Step 8: Real-time Dashboard</h3>
+                        <p class="text-sm text-emerald-700 mt-1">Results, coverage, and defects are visualized in real-time on the Dashboard UI.</p>
+                    </div>
+                 </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer class="text-center py-8 mt-16 border-t border-slate-200">
+        <p class="text-slate-500">AgentQA 007 Intelligent Automation Lifecycle</p>
+    </footer>
+
+</body>
+</html>
