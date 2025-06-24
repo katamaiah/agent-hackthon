@@ -44,6 +44,68 @@
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
         }
+
+        /* Test Pyramid Styling */
+        .pyramid-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 400px; /* Overall max width for the pyramid */
+        }
+        .pyramid-layer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 1rem 0.5rem; /* Vertical padding, minimal horizontal */
+            font-weight: 700;
+            color: white;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            position: relative;
+            height: 70px; /* Slightly reduced height for better taper appearance */
+            transition: all 0.3s ease-in-out;
+        }
+        /* Adjusted widths and overlaps for a more triangular appearance */
+        .pyramid-base {
+            width: 100%;
+            border-bottom-left-radius: 0.5rem;
+            border-bottom-right-radius: 0.5rem;
+            margin-top: 0; /* Base layer has no negative margin */
+        }
+        .pyramid-middle {
+            width: 70%; /* Smaller width for middle layer */
+            margin-top: -30px; /* More overlap */
+        }
+        .pyramid-top {
+            width: 40%; /* Even smaller width for top layer */
+            border-top-left-radius: 0.5rem;
+            border-top-right-radius: 0.5rem;
+            margin-top: -30px; /* More overlap */
+        }
+        /* AgentQA Highlight Overlay */
+        .agentqa-highlight {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(14, 165, 233, 0.95);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: white;
+            padding: 0.5rem;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+            pointer-events: none;
+        }
+        /* Show highlight on hover over the middle layer */
+        .pyramid-middle:hover .agentqa-highlight {
+            opacity: 1;
+        }
     </style>
 </head>
 <body class="antialiased">
@@ -59,6 +121,10 @@
             <div class="text-center mb-12">
                 <h2 class="text-3xl font-bold text-[#0C4A6E] mb-2">The Challenge: A Day in the Life of a BA</h2>
                 <p class="max-w-3xl mx-auto text-lg text-slate-600">Without dedicated QA, Business Analysts are often trapped in a cycle of tedious, repetitive, and error-prone manual testing, diverting them from their core strategic responsibilities.</p>
+            </div>
+
+            <div class="flex justify-center mb-8">
+                <img src="/files/uploaded:Gemini_Generated_Image_hdvdv5hdvdv5hdvd.jpg-81149e90-12bd-490f-bf64-ca0380ee93da" alt="Business Analyst overwhelmed with QA tasks and AgentQA 007 offering automation" class="w-full max-w-2xl rounded-lg shadow-xl border border-slate-200">
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
@@ -108,6 +174,9 @@
         <section id="the-catalyst" class="text-center py-16 my-16 bg-gradient-to-r from-[#0EA5E9] to-[#22C55E] rounded-2xl shadow-2xl text-white">
             <h2 class="text-4xl font-extrabold tracking-tight">The Catalyst: AgentQA 007 Arrives</h2>
             <p class="mt-4 max-w-2xl mx-auto text-lg text-sky-100">An intelligent AI agent designed to automate the entire QA lifecycle, turning chaos into clarity and empowering analysts to reclaim their strategic role.</p>
+            <div class="flex justify-center mt-8">
+                <img src="/files/uploaded:Gemini_Generated_Image_btrj2hbtrj2hbtrj.jpg-39eb985a-cc83-464c-b805-454189380b58" alt="AgentQA 007 AI Robot automating QA processes" class="w-full max-w-xl rounded-lg shadow-xl border border-sky-200">
+            </div>
         </section>
         
         <section id="the-transformation" class="mb-16">
@@ -135,6 +204,33 @@
             </div>
         </section>
 
+        <section id="the-test-pyramid" class="mt-16 bg-white p-8 rounded-xl shadow-lg border border-blue-200">
+            <h2 class="text-3xl font-bold text-center text-[#0C4A6E] mb-6">The Test Pyramid & AgentQA's Focus</h2>
+            <p class="max-w-3xl mx-auto text-lg text-slate-600 text-center mb-8">The Test Pyramid guides efficient testing by advocating for more low-level, fast tests and fewer high-level, slow tests. AgentQA 007 significantly enhances the functional testing layers, ensuring robust quality from the ground up.</p>
+            
+            <div class="pyramid-container mx-auto">
+                <!-- Top Layer: UI Tests -->
+                <div class="pyramid-layer pyramid-top bg-purple-500 z-30">
+                    <span class="text-lg">UI Tests (End-to-End)</span>
+                </div>
+                
+                <!-- Middle Layer: Service/API Tests -->
+                <div class="pyramid-layer pyramid-middle bg-[#0EA5E9] z-20">
+                    <span class="text-lg">Service/API Tests (Functional)</span>
+                    <div class="agentqa-highlight">
+                        <p class="p-2 text-center">AgentQA Focus: Functional Testing Automation</p>
+                    </div>
+                </div>
+                
+                <!-- Base Layer: Unit Tests -->
+                <div class="pyramid-layer pyramid-base bg-emerald-500 z-10">
+                    <span class="text-lg">Unit Tests</span>
+                </div>
+            </div>
+            <p class="max-w-3xl mx-auto text-base text-slate-600 text-center mt-6">AgentQA 007 excels in automating the creation of test cases and test data for **Service/API Tests** and **UI Tests**, which are crucial for ensuring the functional correctness of your application. By generating comprehensive scenarios and data, it empowers BAs to cover these layers effectively, even without deep technical QA expertise.</p>
+        </section>
+
+
         <section id="the-empowered-analyst" class="mt-16">
              <div class="text-center mb-12">
                 <h2 class="text-3xl font-bold text-[#0C4A6E] mb-2">The Empowered Analyst</h2>
@@ -161,60 +257,6 @@
                     <p class="mt-2 font-semibold text-slate-700">Data-Driven Confidence</p>
                     <p class="text-sm text-slate-500">Clear insights from intuitive dashboards.</p>
                 </div>
-            </div>
-        </section>
-
-        <section id="ask-agentqa" class="mt-16 bg-white p-8 rounded-xl shadow-lg border border-blue-200">
-            <h2 class="text-3xl font-bold text-center text-[#0C4A6E] mb-6">✨ Ask AgentQA 007 ✨</h2>
-            <p class="max-w-xl mx-auto text-lg text-slate-600 text-center mb-6">Curious about QA automation or AgentQA 007's capabilities? Ask our AI Agent a question!</p>
-            <div class="flex flex-col md:flex-row gap-4 max-w-2xl mx-auto">
-                <input type="text" id="qaQuestionInput" class="flex-grow p-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-[#0EA5E9] focus:border-transparent text-slate-700" placeholder="e.g., What is regression testing?">
-                <button id="askQaButton" class="bg-[#0EA5E9] text-white px-6 py-3 rounded-lg shadow-md hover:bg-[#0C4A6E] transition-colors duration-300 font-semibold flex items-center justify-center">
-                    Ask AgentQA ✨
-                </button>
-            </div>
-            <div id="qaResponseArea" class="mt-6 p-4 bg-slate-50 rounded-lg border border-slate-200 text-slate-800 min-h-[80px] flex items-center justify-center text-center">
-                <p class="text-slate-500 italic">Your answers will appear here...</p>
-            </div>
-             <div id="qaLoadingIndicator" class="mt-4 text-center text-[#0EA5E9] hidden">
-                <div class="loader ease-linear rounded-full border-4 border-t-4 border-gray-200 h-10 w-10 mb-4 mx-auto animate-spin"></div>
-                <p>AgentQA is thinking...</p>
-            </div>
-        </section>
-
-        <section id="generate-test-cases" class="mt-16 bg-white p-8 rounded-xl shadow-lg border border-green-200">
-            <h2 class="text-3xl font-bold text-center text-[#0C4A6E] mb-6">✨ Generate Test Case Ideas ✨</h2>
-            <p class="max-w-xl mx-auto text-lg text-slate-600 text-center mb-6">Provide a feature description or user story, and AgentQA 007 will suggest initial test case ideas.</p>
-            <div class="flex flex-col gap-4 max-w-2xl mx-auto">
-                <textarea id="featureDescriptionInput" class="flex-grow p-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-[#22C55E] focus:border-transparent text-slate-700" rows="4" placeholder="e.g., As a user, I want to be able to log in securely using my email and password."></textarea>
-                <button id="generateTestCasesButton" class="bg-[#22C55E] text-white px-6 py-3 rounded-lg shadow-md hover:bg-[#16A34A] transition-colors duration-300 font-semibold flex items-center justify-center">
-                    Generate Ideas ✨
-                </button>
-            </div>
-            <div id="testCaseResponseArea" class="mt-6 p-4 bg-slate-50 rounded-lg border border-slate-200 text-slate-800 min-h-[120px]">
-                <p class="text-slate-500 italic text-center">Generated test case ideas will appear here...</p>
-            </div>
-            <div id="testCaseLoadingIndicator" class="mt-4 text-center text-[#22C55E] hidden">
-                <div class="loader ease-linear rounded-full border-4 border-t-4 border-gray-200 h-10 w-10 mb-4 mx-auto animate-spin"></div>
-                <p>AgentQA is brainstorming...</p>
-            </div>
-        </section>
-
-        <section id="generate-test-data" class="mt-16 bg-white p-8 rounded-xl shadow-lg border border-purple-200">
-            <h2 class="text-3xl font-bold text-center text-[#0C4A6E] mb-6">✨ Generate Test Data Ideas ✨</h2>
-            <p class="max-w-xl mx-auto text-lg text-slate-600 text-center mb-6">Describe the kind of test data you need, and AgentQA 007 will provide relevant examples.</p>
-            <div class="flex flex-col gap-4 max-w-2xl mx-auto">
-                <textarea id="testDataDescriptionInput" class="flex-grow p-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-[#8B5CF6] focus:border-transparent text-slate-700" rows="4" placeholder="e.g., A valid email address and a strong password for a new user registration."></textarea>
-                <button id="generateTestDataButton" class="bg-[#8B5CF6] text-white px-6 py-3 rounded-lg shadow-md hover:bg-[#7C3AED] transition-colors duration-300 font-semibold flex items-center justify-center">
-                    Generate Data ✨
-                </button>
-            </div>
-            <div id="testDataResponseArea" class="mt-6 p-4 bg-slate-50 rounded-lg border border-slate-200 text-slate-800 min-h-[120px]">
-                <p class="text-slate-500 italic text-center">Generated test data examples will appear here...</p>
-            </div>
-            <div id="testDataLoadingIndicator" class="mt-4 text-center text-[#8B5CF6] hidden">
-                <div class="loader ease-linear rounded-full border-4 border-t-4 border-gray-200 h-10 w-10 mb-4 mx-auto animate-spin"></div>
-                <p>AgentQA is generating data...</p>
             </div>
         </section>
 
@@ -375,173 +417,6 @@
                         }
                     }
                 }
-            }
-        });
-
-        const qaQuestionInput = document.getElementById('qaQuestionInput');
-        const askQaButton = document.getElementById('askQaButton');
-        const qaResponseArea = document.getElementById('qaResponseArea');
-        const qaLoadingIndicator = document.getElementById('qaLoadingIndicator');
-
-        askQaButton.addEventListener('click', async () => {
-            const question = qaQuestionInput.value.trim();
-            if (!question) {
-                qaResponseArea.innerHTML = '<p class="text-red-500">Please enter a question!</p>';
-                return;
-            }
-
-            qaLoadingIndicator.classList.remove('hidden');
-            qaResponseArea.innerHTML = '';
-            qaResponseArea.classList.remove('bg-red-100', 'border-red-300');
-            qaResponseArea.classList.add('bg-slate-50', 'border-slate-200');
-
-            try {
-                let chatHistory = [];
-                chatHistory.push({ role: "user", parts: [{ text: `You are AgentQA 007, an AI agent specializing in automating QA processes like test case design, test data generation, test execution, and dashboard reporting. Answer the following question concisely and professionally: ${question}` }] });
-                const payload = { contents: chatHistory };
-                const apiKey = "";
-                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
-
-                const response = await fetch(apiUrl, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(payload)
-                });
-
-                const result = await response.json();
-                if (result.candidates && result.candidates.length > 0 &&
-                    result.candidates[0].content && result.candidates[0].content.parts &&
-                    result.candidates[0].content.parts.length > 0) {
-                    const text = result.candidates[0].content.parts[0].text;
-                    qaResponseArea.innerHTML = `<p>${text}</p>`;
-                } else {
-                    qaResponseArea.innerHTML = '<p class="text-red-500">Sorry, I could not get a response from AgentQA. Please try again.</p>';
-                    qaResponseArea.classList.remove('bg-slate-50', 'border-slate-200');
-                    qaResponseArea.classList.add('bg-red-100', 'border-red-300');
-                }
-            } catch (error) {
-                console.error("Error calling Gemini API:", error);
-                qaResponseArea.innerHTML = '<p class="text-red-500">An error occurred while connecting to AgentQA. Please check your network.</p>';
-                qaResponseArea.classList.remove('bg-slate-50', 'border-slate-200');
-                qaResponseArea.classList.add('bg-red-100', 'border-red-300');
-            } finally {
-                qaLoadingIndicator.classList.add('hidden');
-            }
-        });
-
-        const featureDescriptionInput = document.getElementById('featureDescriptionInput');
-        const generateTestCasesButton = document.getElementById('generateTestCasesButton');
-        const testCaseResponseArea = document.getElementById('testCaseResponseArea');
-        const testCaseLoadingIndicator = document.getElementById('testCaseLoadingIndicator');
-
-        generateTestCasesButton.addEventListener('click', async () => {
-            const featureDescription = featureDescriptionInput.value.trim();
-            if (!featureDescription) {
-                testCaseResponseArea.innerHTML = '<p class="text-red-500 text-center">Please enter a feature description!</p>';
-                return;
-            }
-
-            testCaseLoadingIndicator.classList.remove('hidden');
-            testCaseResponseArea.innerHTML = '';
-            testCaseResponseArea.classList.remove('bg-red-100', 'border-red-300');
-            testCaseResponseArea.classList.add('bg-slate-50', 'border-slate-200');
-
-            try {
-                let chatHistory = [];
-                chatHistory.push({ role: "user", parts: [{ text: `You are AgentQA 007, an AI agent specializing in automating test case design. Given the following feature description or user story, generate a concise list of 3-5 initial test case ideas (e.g., positive, negative, edge cases). Focus on high-level scenarios.
-                Feature/User Story: "${featureDescription}"` }] });
-                const payload = { contents: chatHistory };
-                const apiKey = "";
-                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
-
-                const response = await fetch(apiUrl, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(payload)
-                });
-
-                const result = await response.json();
-                if (result.candidates && result.candidates.length > 0 &&
-                    result.candidates[0].content && result.candidates[0].content.parts &&
-                    result.candidates[0].content.parts.length > 0) {
-                    const text = result.candidates[0].content.parts[0].text;
-                    // Format the text into a list if it looks like bullet points
-                    if (text.startsWith('*') || text.startsWith('-') || text.startsWith('1.')) {
-                        const listItems = text.split('\n').map(item => item.trim()).filter(item => item.length > 0);
-                        testCaseResponseArea.innerHTML = '<ul class="list-disc pl-5">' + listItems.map(item => `<li>${item.replace(/^[*-]\s*/, '')}</li>`).join('') + '</ul>';
-                    } else {
-                        testCaseResponseArea.innerHTML = `<p>${text}</p>`;
-                    }
-                } else {
-                    testCaseResponseArea.innerHTML = '<p class="text-red-500 text-center">Sorry, I could not generate test case ideas. Please try again.</p>';
-                    testCaseResponseArea.classList.remove('bg-slate-50', 'border-slate-200');
-                    testCaseResponseArea.classList.add('bg-red-100', 'border-red-300');
-                }
-            } catch (error) {
-                console.error("Error calling Gemini API for test cases:", error);
-                testCaseResponseArea.innerHTML = '<p class="text-red-500 text-center">An error occurred while generating ideas. Please check your network.</p>';
-                testCaseResponseArea.classList.remove('bg-slate-50', 'border-slate-200');
-                testCaseResponseArea.classList.add('bg-red-100', 'border-red-300');
-            } finally {
-                testCaseLoadingIndicator.classList.add('hidden');
-            }
-        });
-
-        const testDataDescriptionInput = document.getElementById('testDataDescriptionInput');
-        const generateTestDataButton = document.getElementById('generateTestDataButton');
-        const testDataResponseArea = document.getElementById('testDataResponseArea');
-        const testDataLoadingIndicator = document.getElementById('testDataLoadingIndicator');
-
-        generateTestDataButton.addEventListener('click', async () => {
-            const dataDescription = testDataDescriptionInput.value.trim();
-            if (!dataDescription) {
-                testDataResponseArea.innerHTML = '<p class="text-red-500 text-center">Please describe the test data needed!</p>';
-                return;
-            }
-
-            testDataLoadingIndicator.classList.remove('hidden');
-            testDataResponseArea.innerHTML = '';
-            testDataResponseArea.classList.remove('bg-red-100', 'border-red-300');
-            testDataResponseArea.classList.add('bg-slate-50', 'border-slate-200');
-
-            try {
-                let chatHistory = [];
-                chatHistory.push({ role: "user", parts: [{ text: `You are AgentQA 007, an AI agent specializing in automating test data generation. Given the following description, provide 3-5 concise examples of test data.
-                Data Needed: "${dataDescription}"` }] });
-                const payload = { contents: chatHistory };
-                const apiKey = "";
-                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
-
-                const response = await fetch(apiUrl, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(payload)
-                });
-
-                const result = await response.json();
-                if (result.candidates && result.candidates.length > 0 &&
-                    result.candidates[0].content && result.candidates[0].content.parts &&
-                    result.candidates[0].content.parts.length > 0) {
-                    const text = result.candidates[0].content.parts[0].text;
-                     // Format the text into a list if it looks like bullet points
-                    if (text.startsWith('*') || text.startsWith('-') || text.startsWith('1.')) {
-                        const listItems = text.split('\n').map(item => item.trim()).filter(item => item.length > 0);
-                        testDataResponseArea.innerHTML = '<ul class="list-disc pl-5">' + listItems.map(item => `<li>${item.replace(/^[*-]\s*/, '')}</li>`).join('') + '</ul>';
-                    } else {
-                        testDataResponseArea.innerHTML = `<p>${text}</p>`;
-                    }
-                } else {
-                    testDataResponseArea.innerHTML = '<p class="text-red-500 text-center">Sorry, I could not generate test data. Please try again.</p>';
-                    testDataResponseArea.classList.remove('bg-slate-50', 'border-slate-200');
-                    testDataResponseArea.classList.add('bg-red-100', 'border-red-300');
-                }
-            } catch (error) {
-                console.error("Error calling Gemini API for test data:", error);
-                testDataResponseArea.innerHTML = '<p class="text-red-500 text-center">An error occurred while generating data. Please check your network.</p>';
-                testDataResponseArea.classList.remove('bg-slate-50', 'border-slate-200');
-                testDataResponseArea.classList.add('bg-red-100', 'border-red-300');
-            } finally {
-                testDataLoadingIndicator.classList.add('hidden');
             }
         });
     </script>
