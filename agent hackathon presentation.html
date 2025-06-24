@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgentQA 007: From Manual Mayhem to Automated Excellence</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F0FDF4;
+            color: #082f49;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 320px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        .loader {
+            border-top-color: #3498db;
+            -webkit-animation: spinner 1.5s linear infinite;
+            animation: spinner 1.5s linear infinite;
+        }
+
+        @-webkit-keyframes spinner {
+            0% { -webkit-transform: rotate(0deg); }
+            100% { -webkit-transform: rotate(360deg); }
+        }
+
+        @keyframes spinner {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <header class="text-center py-12 px-4 bg-white/50">
+        <h1 class="text-4xl md:text-5xl font-extrabold text-[#0C4A6E] tracking-tight">From Manual Mayhem to Automated Excellence</h1>
+        <p class="mt-4 text-lg md:text-xl text-[#0EA5E9] font-medium">The Transformative Impact of AgentQA 007 on Business Analysts</p>
+    </header>
+
+    <main class="container mx-auto p-4 md:p-8">
+        
+        <section id="the-challenge" class="mb-16">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-[#0C4A6E] mb-2">The Challenge: A Day in the Life of a BA</h2>
+                <p class="max-w-3xl mx-auto text-lg text-slate-600">Without dedicated QA, Business Analysts are often trapped in a cycle of tedious, repetitive, and error-prone manual testing, diverting them from their core strategic responsibilities.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div class="bg-white p-6 rounded-xl shadow-lg border border-yellow-300">
+                    <div class="text-5xl font-black text-yellow-500">40+</div>
+                    <p class="mt-2 font-semibold text-slate-700">Hours Per Week</p>
+                    <p class="text-sm text-slate-500">Spent on manual test case design, data entry, and execution.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg border border-red-300">
+                    <div class="text-5xl font-black text-red-500">65%</div>
+                    <p class="mt-2 font-semibold text-slate-700">Of Time Diverted</p>
+                    <p class="text-sm text-slate-500">From crucial business analysis and stakeholder engagement.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg border border-orange-300">
+                    <div class="text-5xl font-black text-orange-500">15+</div>
+                    <p class="mt-2 font-semibold text-slate-700">Critical Bugs</p>
+                    <p class="text-sm text-slate-500">On average, slipping into production per release cycle.</p>
+                </div>
+            </div>
+
+            <div class="mt-12 bg-white rounded-xl shadow-lg p-6 md:p-8">
+                <h3 class="text-xl font-bold text-center text-[#0C4A6E] mb-6">The Chaotic Manual Process Flow</h3>
+                <div class="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-4 text-center">
+                    <div class="p-4 border-2 border-dashed border-red-400 rounded-lg bg-red-50 w-full md:w-auto">
+                        <p class="font-semibold text-red-800">Analyze Requirements</p>
+                        <p class="text-xs text-red-600">(Manual Reading)</p>
+                    </div>
+                    <div class="text-2xl font-bold text-red-500 transform md:-rotate-90">↓</div>
+                    <div class="p-4 border-2 border-dashed border-orange-400 rounded-lg bg-orange-50 w-full md:w-auto">
+                        <p class="font-semibold text-orange-800">Write Test Cases</p>
+                        <p class="text-xs text-orange-600">(Spreadsheet Hell)</p>
+                    </div>
+                    <div class="text-2xl font-bold text-orange-500 transform md:-rotate-90">↓</div>
+                    <div class="p-4 border-2 border-dashed border-yellow-400 rounded-lg bg-yellow-50 w-full md:w-auto">
+                        <p class="font-semibold text-yellow-800">Execute Manually</p>
+                        <p class="text-xs text-yellow-600">(Repetitive & Slow)</p>
+                    </div>
+                    <div class="text-2xl font-bold text-yellow-500 transform md:-rotate-90">↓</div>
+                    <div class="p-4 border-2 border-dashed border-slate-400 rounded-lg bg-slate-50 w-full md:w-auto">
+                        <p class="font-semibold text-slate-800">Report Bugs</p>
+                        <p class="text-xs text-slate-600">(Inconsistent & Delayed)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="the-catalyst" class="text-center py-16 my-16 bg-gradient-to-r from-[#0EA5E9] to-[#22C55E] rounded-2xl shadow-2xl text-white">
+            <h2 class="text-4xl font-extrabold tracking-tight">The Catalyst: AgentQA 007 Arrives</h2>
+            <p class="mt-4 max-w-2xl mx-auto text-lg text-sky-100">An intelligent AI agent designed to automate the entire QA lifecycle, turning chaos into clarity and empowering analysts to reclaim their strategic role.</p>
+        </section>
+        
+        <section id="the-transformation" class="mb-16">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-[#0C4A6E] mb-2">The Transformation: Automated Excellence</h2>
+                <p class="max-w-3xl mx-auto text-lg text-slate-600">AgentQA 007 revolutionizes key performance indicators, showcasing a dramatic shift in efficiency, quality, and focus.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <h3 class="text-xl font-bold text-center text-[#0C4A6E] mb-4">Shift in BA Time Allocation</h3>
+                    <p class="text-center text-sm text-slate-500 mb-4">AgentQA 007 automates tedious work, freeing up analysts to focus on high-value strategic tasks.</p>
+                    <div class="chart-container">
+                        <canvas id="timeAllocationChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <h3 class="text-xl font-bold text-center text-[#0C4A6E] mb-4">Core Metrics: Before vs. After</h3>
+                    <p class="text-center text-sm text-slate-500 mb-4">A direct comparison reveals monumental improvements in speed, coverage, and final product quality.</p>
+                    <div class="chart-container">
+                        <canvas id="metricsComparisonChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="the-empowered-analyst" class="mt-16">
+             <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-[#0C4A6E] mb-2">The Empowered Analyst</h2>
+                <p class="max-w-3xl mx-auto text-lg text-slate-600">The result is not just a better product, but a more effective and fulfilled Business Analyst.</p>
+            </div>
+            <div class="bg-white p-8 rounded-xl shadow-2xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+                 <div>
+                    <div class="text-5xl font-black text-[#22C55E]">5x</div>
+                    <p class="mt-2 font-semibold text-slate-700">Faster Release Cycles</p>
+                    <p class="text-sm text-slate-500">Accelerated time-to-market.</p>
+                </div>
+                 <div>
+                    <div class="text-5xl font-black text-[#22C55E]">80%</div>
+                    <p class="mt-2 font-semibold text-slate-700">Reduction in Manual Effort</p>
+                    <p class="text-sm text-slate-500">Focus shifts to strategy.</p>
+                </div>
+                 <div>
+                    <div class="text-5xl font-black text-[#0EA5E9]">95%</div>
+                    <p class="mt-2 font-semibold text-slate-700">Automated Test Coverage</p>
+                    <p class="text-sm text-slate-500">Fewer bugs escape to production.</p>
+                </div>
+                 <div>
+                    <div class="text-5xl font-black text-[#0EA5E9]">100%</div>
+                    <p class="mt-2 font-semibold text-slate-700">Data-Driven Confidence</p>
+                    <p class="text-sm text-slate-500">Clear insights from intuitive dashboards.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="ask-agentqa" class="mt-16 bg-white p-8 rounded-xl shadow-lg border border-blue-200">
+            <h2 class="text-3xl font-bold text-center text-[#0C4A6E] mb-6">✨ Ask AgentQA 007 ✨</h2>
+            <p class="max-w-xl mx-auto text-lg text-slate-600 text-center mb-6">Curious about QA automation or AgentQA 007's capabilities? Ask our AI Agent a question!</p>
+            <div class="flex flex-col md:flex-row gap-4 max-w-2xl mx-auto">
+                <input type="text" id="qaQuestionInput" class="flex-grow p-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-[#0EA5E9] focus:border-transparent text-slate-700" placeholder="e.g., What is regression testing?">
+                <button id="askQaButton" class="bg-[#0EA5E9] text-white px-6 py-3 rounded-lg shadow-md hover:bg-[#0C4A6E] transition-colors duration-300 font-semibold flex items-center justify-center">
+                    Ask AgentQA ✨
+                </button>
+            </div>
+            <div id="qaResponseArea" class="mt-6 p-4 bg-slate-50 rounded-lg border border-slate-200 text-slate-800 min-h-[80px] flex items-center justify-center text-center">
+                <p class="text-slate-500 italic">Your answers will appear here...</p>
+            </div>
+             <div id="qaLoadingIndicator" class="mt-4 text-center text-[#0EA5E9] hidden">
+                <div class="loader ease-linear rounded-full border-4 border-t-4 border-gray-200 h-10 w-10 mb-4 mx-auto animate-spin"></div>
+                <p>AgentQA is thinking...</p>
+            </div>
+        </section>
+
+        <section id="generate-test-cases" class="mt-16 bg-white p-8 rounded-xl shadow-lg border border-green-200">
+            <h2 class="text-3xl font-bold text-center text-[#0C4A6E] mb-6">✨ Generate Test Case Ideas ✨</h2>
+            <p class="max-w-xl mx-auto text-lg text-slate-600 text-center mb-6">Provide a feature description or user story, and AgentQA 007 will suggest initial test case ideas.</p>
+            <div class="flex flex-col gap-4 max-w-2xl mx-auto">
+                <textarea id="featureDescriptionInput" class="flex-grow p-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-[#22C55E] focus:border-transparent text-slate-700" rows="4" placeholder="e.g., As a user, I want to be able to log in securely using my email and password."></textarea>
+                <button id="generateTestCasesButton" class="bg-[#22C55E] text-white px-6 py-3 rounded-lg shadow-md hover:bg-[#16A34A] transition-colors duration-300 font-semibold flex items-center justify-center">
+                    Generate Ideas ✨
+                </button>
+            </div>
+            <div id="testCaseResponseArea" class="mt-6 p-4 bg-slate-50 rounded-lg border border-slate-200 text-slate-800 min-h-[120px]">
+                <p class="text-slate-500 italic text-center">Generated test case ideas will appear here...</p>
+            </div>
+            <div id="testCaseLoadingIndicator" class="mt-4 text-center text-[#22C55E] hidden">
+                <div class="loader ease-linear rounded-full border-4 border-t-4 border-gray-200 h-10 w-10 mb-4 mx-auto animate-spin"></div>
+                <p>AgentQA is brainstorming...</p>
+            </div>
+        </section>
+
+        <section id="generate-test-data" class="mt-16 bg-white p-8 rounded-xl shadow-lg border border-purple-200">
+            <h2 class="text-3xl font-bold text-center text-[#0C4A6E] mb-6">✨ Generate Test Data Ideas ✨</h2>
+            <p class="max-w-xl mx-auto text-lg text-slate-600 text-center mb-6">Describe the kind of test data you need, and AgentQA 007 will provide relevant examples.</p>
+            <div class="flex flex-col gap-4 max-w-2xl mx-auto">
+                <textarea id="testDataDescriptionInput" class="flex-grow p-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-[#8B5CF6] focus:border-transparent text-slate-700" rows="4" placeholder="e.g., A valid email address and a strong password for a new user registration."></textarea>
+                <button id="generateTestDataButton" class="bg-[#8B5CF6] text-white px-6 py-3 rounded-lg shadow-md hover:bg-[#7C3AED] transition-colors duration-300 font-semibold flex items-center justify-center">
+                    Generate Data ✨
+                </button>
+            </div>
+            <div id="testDataResponseArea" class="mt-6 p-4 bg-slate-50 rounded-lg border border-slate-200 text-slate-800 min-h-[120px]">
+                <p class="text-slate-500 italic text-center">Generated test data examples will appear here...</p>
+            </div>
+            <div id="testDataLoadingIndicator" class="mt-4 text-center text-[#8B5CF6] hidden">
+                <div class="loader ease-linear rounded-full border-4 border-t-4 border-gray-200 h-10 w-10 mb-4 mx-auto animate-spin"></div>
+                <p>AgentQA is generating data...</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="text-center py-8 mt-16 border-t border-slate-200">
+        <p class="text-slate-500">AgentQA 007 Infographic</p>
+    </footer>
+
+    <script>
+        function wrapText(str, maxWidth) {
+            if (str.length <= maxWidth) {
+                return str;
+            }
+            const words = str.split(' ');
+            let lines = [];
+            let currentLine = '';
+
+            for (const word of words) {
+                if ((currentLine + ' ' + word).trim().length > maxWidth && currentLine.length > 0) {
+                    lines.push(currentLine);
+                    currentLine = word;
+                } else {
+                    currentLine = (currentLine + ' ' + word).trim();
+                }
+            }
+            if (currentLine.length > 0) {
+                lines.push(currentLine);
+            }
+            return lines;
+        }
+
+        const commonTooltipOptions = {
+            plugins: {
+                tooltip: {
+                    callbacks: {
+                        title: function(tooltipItems) {
+                            const item = tooltipItems[0];
+                            let label = item.chart.data.labels[item.dataIndex];
+                            if (Array.isArray(label)) {
+                                return label.join(' ');
+                            } else {
+                                return label;
+                            }
+                        }
+                    }
+                }
+            }
+        };
+
+        const timeAllocationCtx = document.getElementById('timeAllocationChart').getContext('2d');
+        const timeAllocationChart = new Chart(timeAllocationCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Manual QA Tasks', 'Strategic Analysis'],
+                datasets: [{
+                    label: 'Before',
+                    data: [75, 25],
+                    backgroundColor: ['#FBBF24', '#FDE68A'],
+                    borderColor: '#ffffff',
+                    borderWidth: 4,
+                },
+                {
+                    label: 'After',
+                    data: [15, 85],
+                    backgroundColor: ['#22C55E', '#86EFAC'],
+                    borderColor: '#ffffff',
+                    borderWidth: 4,
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                cutout: '60%',
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            font: {
+                                size: 14
+                            }
+                        }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                let label = context.dataset.label || '';
+                                if (label) {
+                                    label += ': ';
+                                }
+                                if (context.parsed !== null) {
+                                    label += context.parsed + '%';
+                                }
+                                return label;
+                            },
+                            title: function(tooltipItems) {
+                                return tooltipItems[0].label;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        const metricsComparisonCtx = document.getElementById('metricsComparisonChart').getContext('2d');
+        const metricsComparisonChart = new Chart(metricsComparisonCtx, {
+            type: 'bar',
+            data: {
+                labels: [
+                    wrapText('Avg. Release Cycle Time (Days)', 16),
+                    wrapText('Critical Bugs in Production', 16),
+                    wrapText('Automated Test Coverage (%)', 16)
+                ],
+                datasets: [
+                    {
+                        label: 'Before AgentQA',
+                        data: [20, 15, 10],
+                        backgroundColor: '#FBBF24',
+                        borderColor: '#F59E0B',
+                        borderWidth: 1,
+                        borderRadius: 4
+                    },
+                    {
+                        label: 'After AgentQA',
+                        data: [4, 4, 95],
+                        backgroundColor: '#22C55E',
+                        borderColor: '#16A34A',
+                        borderWidth: 1,
+                        borderRadius: 4
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                         grid: {
+                            color: '#e2e8f0'
+                        }
+                    },
+                    x: {
+                        grid: {
+                            display: false
+                        }
+                    }
+                },
+                ...commonTooltipOptions,
+                plugins: {
+                    ...commonTooltipOptions.plugins,
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                             font: {
+                                size: 14
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        const qaQuestionInput = document.getElementById('qaQuestionInput');
+        const askQaButton = document.getElementById('askQaButton');
+        const qaResponseArea = document.getElementById('qaResponseArea');
+        const qaLoadingIndicator = document.getElementById('qaLoadingIndicator');
+
+        askQaButton.addEventListener('click', async () => {
+            const question = qaQuestionInput.value.trim();
+            if (!question) {
+                qaResponseArea.innerHTML = '<p class="text-red-500">Please enter a question!</p>';
+                return;
+            }
+
+            qaLoadingIndicator.classList.remove('hidden');
+            qaResponseArea.innerHTML = '';
+            qaResponseArea.classList.remove('bg-red-100', 'border-red-300');
+            qaResponseArea.classList.add('bg-slate-50', 'border-slate-200');
+
+            try {
+                let chatHistory = [];
+                chatHistory.push({ role: "user", parts: [{ text: `You are AgentQA 007, an AI agent specializing in automating QA processes like test case design, test data generation, test execution, and dashboard reporting. Answer the following question concisely and professionally: ${question}` }] });
+                const payload = { contents: chatHistory };
+                const apiKey = "";
+                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                const result = await response.json();
+                if (result.candidates && result.candidates.length > 0 &&
+                    result.candidates[0].content && result.candidates[0].content.parts &&
+                    result.candidates[0].content.parts.length > 0) {
+                    const text = result.candidates[0].content.parts[0].text;
+                    qaResponseArea.innerHTML = `<p>${text}</p>`;
+                } else {
+                    qaResponseArea.innerHTML = '<p class="text-red-500">Sorry, I could not get a response from AgentQA. Please try again.</p>';
+                    qaResponseArea.classList.remove('bg-slate-50', 'border-slate-200');
+                    qaResponseArea.classList.add('bg-red-100', 'border-red-300');
+                }
+            } catch (error) {
+                console.error("Error calling Gemini API:", error);
+                qaResponseArea.innerHTML = '<p class="text-red-500">An error occurred while connecting to AgentQA. Please check your network.</p>';
+                qaResponseArea.classList.remove('bg-slate-50', 'border-slate-200');
+                qaResponseArea.classList.add('bg-red-100', 'border-red-300');
+            } finally {
+                qaLoadingIndicator.classList.add('hidden');
+            }
+        });
+
+        const featureDescriptionInput = document.getElementById('featureDescriptionInput');
+        const generateTestCasesButton = document.getElementById('generateTestCasesButton');
+        const testCaseResponseArea = document.getElementById('testCaseResponseArea');
+        const testCaseLoadingIndicator = document.getElementById('testCaseLoadingIndicator');
+
+        generateTestCasesButton.addEventListener('click', async () => {
+            const featureDescription = featureDescriptionInput.value.trim();
+            if (!featureDescription) {
+                testCaseResponseArea.innerHTML = '<p class="text-red-500 text-center">Please enter a feature description!</p>';
+                return;
+            }
+
+            testCaseLoadingIndicator.classList.remove('hidden');
+            testCaseResponseArea.innerHTML = '';
+            testCaseResponseArea.classList.remove('bg-red-100', 'border-red-300');
+            testCaseResponseArea.classList.add('bg-slate-50', 'border-slate-200');
+
+            try {
+                let chatHistory = [];
+                chatHistory.push({ role: "user", parts: [{ text: `You are AgentQA 007, an AI agent specializing in automating test case design. Given the following feature description or user story, generate a concise list of 3-5 initial test case ideas (e.g., positive, negative, edge cases). Focus on high-level scenarios.
+                Feature/User Story: "${featureDescription}"` }] });
+                const payload = { contents: chatHistory };
+                const apiKey = "";
+                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                const result = await response.json();
+                if (result.candidates && result.candidates.length > 0 &&
+                    result.candidates[0].content && result.candidates[0].content.parts &&
+                    result.candidates[0].content.parts.length > 0) {
+                    const text = result.candidates[0].content.parts[0].text;
+                    // Format the text into a list if it looks like bullet points
+                    if (text.startsWith('*') || text.startsWith('-') || text.startsWith('1.')) {
+                        const listItems = text.split('\n').map(item => item.trim()).filter(item => item.length > 0);
+                        testCaseResponseArea.innerHTML = '<ul class="list-disc pl-5">' + listItems.map(item => `<li>${item.replace(/^[*-]\s*/, '')}</li>`).join('') + '</ul>';
+                    } else {
+                        testCaseResponseArea.innerHTML = `<p>${text}</p>`;
+                    }
+                } else {
+                    testCaseResponseArea.innerHTML = '<p class="text-red-500 text-center">Sorry, I could not generate test case ideas. Please try again.</p>';
+                    testCaseResponseArea.classList.remove('bg-slate-50', 'border-slate-200');
+                    testCaseResponseArea.classList.add('bg-red-100', 'border-red-300');
+                }
+            } catch (error) {
+                console.error("Error calling Gemini API for test cases:", error);
+                testCaseResponseArea.innerHTML = '<p class="text-red-500 text-center">An error occurred while generating ideas. Please check your network.</p>';
+                testCaseResponseArea.classList.remove('bg-slate-50', 'border-slate-200');
+                testCaseResponseArea.classList.add('bg-red-100', 'border-red-300');
+            } finally {
+                testCaseLoadingIndicator.classList.add('hidden');
+            }
+        });
+
+        const testDataDescriptionInput = document.getElementById('testDataDescriptionInput');
+        const generateTestDataButton = document.getElementById('generateTestDataButton');
+        const testDataResponseArea = document.getElementById('testDataResponseArea');
+        const testDataLoadingIndicator = document.getElementById('testDataLoadingIndicator');
+
+        generateTestDataButton.addEventListener('click', async () => {
+            const dataDescription = testDataDescriptionInput.value.trim();
+            if (!dataDescription) {
+                testDataResponseArea.innerHTML = '<p class="text-red-500 text-center">Please describe the test data needed!</p>';
+                return;
+            }
+
+            testDataLoadingIndicator.classList.remove('hidden');
+            testDataResponseArea.innerHTML = '';
+            testDataResponseArea.classList.remove('bg-red-100', 'border-red-300');
+            testDataResponseArea.classList.add('bg-slate-50', 'border-slate-200');
+
+            try {
+                let chatHistory = [];
+                chatHistory.push({ role: "user", parts: [{ text: `You are AgentQA 007, an AI agent specializing in automating test data generation. Given the following description, provide 3-5 concise examples of test data.
+                Data Needed: "${dataDescription}"` }] });
+                const payload = { contents: chatHistory };
+                const apiKey = "";
+                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                const result = await response.json();
+                if (result.candidates && result.candidates.length > 0 &&
+                    result.candidates[0].content && result.candidates[0].content.parts &&
+                    result.candidates[0].content.parts.length > 0) {
+                    const text = result.candidates[0].content.parts[0].text;
+                     // Format the text into a list if it looks like bullet points
+                    if (text.startsWith('*') || text.startsWith('-') || text.startsWith('1.')) {
+                        const listItems = text.split('\n').map(item => item.trim()).filter(item => item.length > 0);
+                        testDataResponseArea.innerHTML = '<ul class="list-disc pl-5">' + listItems.map(item => `<li>${item.replace(/^[*-]\s*/, '')}</li>`).join('') + '</ul>';
+                    } else {
+                        testDataResponseArea.innerHTML = `<p>${text}</p>`;
+                    }
+                } else {
+                    testDataResponseArea.innerHTML = '<p class="text-red-500 text-center">Sorry, I could not generate test data. Please try again.</p>';
+                    testDataResponseArea.classList.remove('bg-slate-50', 'border-slate-200');
+                    testDataResponseArea.classList.add('bg-red-100', 'border-red-300');
+                }
+            } catch (error) {
+                console.error("Error calling Gemini API for test data:", error);
+                testDataResponseArea.innerHTML = '<p class="text-red-500 text-center">An error occurred while generating data. Please check your network.</p>';
+                testDataResponseArea.classList.remove('bg-slate-50', 'border-slate-200');
+                testDataResponseArea.classList.add('bg-red-100', 'border-red-300');
+            } finally {
+                testDataLoadingIndicator.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html>
