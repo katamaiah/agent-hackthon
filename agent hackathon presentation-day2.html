@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgentQA 007 - Driving Forward28 Success</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F0FDF4; /* From attached HTML */
+            color: #082f49; /* From attached HTML */
+            line-height: 1.5;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            flex-grow: 1;
+        }
+        .section-header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+        .section-header h2 {
+            font-size: 2.25rem;
+            font-weight: 700;
+            color: #0C4A6E; /* From attached HTML */
+            margin-bottom: 0.5rem;
+            position: relative;
+            display: inline-block;
+        }
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: -6px;
+            transform: translateX(-50%);
+            width: 70px;
+            height: 3px;
+            background-color: #0EA5E9; /* Blue from attached HTML */
+            border-radius: 2px;
+        }
+        .section-header p {
+            font-size: 1.05rem;
+            color: #4a5568; /* General text color, similar to slate-600 */
+            max-width: 700px;
+            margin: 0.5rem auto 0;
+        }
+        .card {
+            background-color: #ffffff;
+            border-radius: 1rem;
+            padding: 1.75rem;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+            border: 1px solid #e0e7ff; /* Placeholder, will be overridden by specific card borders */
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+        /* Specific card borders from attached HTML where applicable */
+        .card-yellow-border { border-color: #FCD34D; } /* yellow-300 */
+        .card-red-border { border-color: #F87171; }    /* red-300 */
+        .card-orange-border { border-color: #FDBA74; }  /* orange-300 */
+        .card-blue-border { border-color: #93c5fd; } /* blue-200 closest */
+
+
+        .icon-box {
+            background: linear-gradient(to right bottom, #0EA5E9, #22C55E); /* Blue to Green gradient from attached HTML */
+            color: #ffffff;
+            padding: 0.9rem;
+            border-radius: 0.75rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.25rem;
+            box-shadow: 0 3px 8px rgba(14, 165, 233, 0.4); /* Shadow color from blue */
+        }
+        .icon-box svg {
+            width: 28px;
+            height: 28px;
+        }
+        .flow-arrow {
+            color: #0EA5E9; /* Blue from attached HTML */
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin: 1.5rem 0;
+            text-align: center;
+            animation: bounce-arrow 1.5s infinite;
+        }
+        @keyframes bounce-arrow {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+        .metric-box {
+            background-color: #ecfdf5; /* Light green for metrics, matching attached HTML's values' light backgrounds*/
+            border: 1px solid #a7f3d0;
+            border-radius: 0.75rem;
+            padding: 1.25rem;
+            text-align: center;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+        }
+        .metric-value {
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: #047857; /* Dark green similar to attached HTML's green */
+            line-height: 1;
+            margin-bottom: 0.4rem;
+        }
+        .metric-label {
+            font-size: 1rem;
+            color: #10B981; /* Medium green similar to attached HTML's green */
+            font-weight: 600;
+        }
+        /* Specific metric colors based on attached HTML */
+        .metric-value.yellow { color: #F59E0B; } /* yellow-500 */
+        .metric-value.red { color: #EF4444; }    /* red-500 */
+        .metric-value.orange { color: #F97316; } /* orange-500 */
+        .metric-value.blue { color: #0EA5E9; } /* From attached HTML */
+        .metric-value.green { color: #22C55E; } /* From attached HTML */
+        .metric-label.blue { color: #0EA5E9; }
+        .metric-label.green { color: #22C55E; }
+
+        /* Styling for smaller cards in section 2 and 3 */
+        .small-card {
+            padding: 1rem; /* Smaller padding */
+        }
+        .small-card h3 {
+            font-size: 1.15rem; /* Smaller heading font size */
+        }
+        .small-card ul {
+            font-size: 0.85rem; /* Smaller list item font size */
+            margin-top: 0.5rem;
+        }
+        .small-card .icon-box {
+            padding: 0.7rem; /* Smaller icon box padding */
+            margin-bottom: 0.75rem;
+        }
+        .small-card .icon-box svg {
+            width: 24px; /* Smaller icon size */
+            height: 24px;
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <div class="container py-8">
+
+        <!-- Header Section -->
+        <header class="text-center py-12 px-4 bg-white/50 mb-14">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-[#0C4A6E] tracking-tight mb-4 leading-tight">
+                AgentQA 007  
+            </h1>
+            <p class="mt-2 text-lg md:text-xl text-[#0EA5E9] font-medium max-w-3xl mx-auto">
+             A Paradigm-shift in Re-imagining quality assurance using AI
+            </p>
+        </header>
+
+        <!-- Strategic Imperative -->
+        <section class="mb-16">
+            <div class="section-header">
+                <h2 class="text-3xl text-[#0C4A6E]">1. Strategic Imperative: Accelerating Forward28</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="card flex flex-col items-center text-center card-red-border">
+                    <div class="icon-box">
+                        <!-- Icon: Alert Circle -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-alert-circle"><circle cx="12" cy="12" r="10"/><line x1="12" x2="12" y1="8" y2="12"/><line x1="12" x2="12.01" y1="16" y2="16"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-gray-800">The Challenge: Bottlenecks & Risks</h3>
+                    <p class="text-slate-600 text-sm">Forward28,an ambitious agenda comes with the challenge of ensuring quality at speed. Currently, Business Analysts (BAs) shoulder the burden of QA, a model that, while functional, isn't scalable for the future.</p>
+                </div>
+                <div class="card flex flex-col items-center text-center card-blue-border">
+                    <div class="icon-box">
+                        <!-- Icon: Rocket -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-rocket"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.75-.75 1.37-2.06 1.4-2.71-.02-.03 4.13-3.79 5.88-5.54 1.43-1.43 2.5-3.92 2.5-3.92C18 4 15 2 15 2s-2.92 1.07-3.92 2.5c-1.75 1.75-5.51 5.6-5.54 5.88-.65.03-1.96.65-2.71 1.4Z"/><path d="M10 9l9.3-9.3"/><path d="M16 3l3 3"/><path d="M2 7l4 4"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-gray-800">The Vision: Quality at Speed</h3>
+                    <p class="text-slate-600 text-sm">Reimagine QA to match Forward28's pace, ensuring high-quality, secure digital solutions efficiently.</p>
+                </div>
+            </div>
+        </section>
+
+        
+        <!-- Our Compelling Story -->
+        <section class="section-header mb-12">
+            <h2 class="text-3xl text-[#0C4A6E] mb-6">2. A Future-Ready Bank</h2>
+            <p class="text-lg text-slate-600 max-w-4xl mx-auto mb-8">
+           
+            </p>
+            <div class="flex justify-center mb-8">
+                <img src="Gemini_Generated_Image_btrj2hbtrj2hbtrj.png" alt="AgentQA 007 AI Robot automating QA processes" class="w-full max-w-xl rounded-lg shadow-xl border border-sky-200">
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center text-gray-800">
+                <div class="card p-6 flex flex-col items-center justify-center card-green-border">
+                    <div class="icon-box mb-3">
+                        <!-- Icon: Fast Forward -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-fast-forward"><polygon points="13 19 22 12 13 5 13 19"/><polygon points="2 19 11 12 2 5 2 19"/></svg>
+                    </div>
+                    <p class="text-base font-medium text-slate-700">Digital products delivered faster, with inherent quality and speed.</p>
+                </div>
+                <div class="card p-6 flex flex-col items-center justify-center card-blue-border">
+                    <div class="icon-box mb-3">
+                        <!-- Icon: Crown -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-crown"><path d="m12 5 9 5-4 12H7L3 10l9-5z"/><path d="M22 10 15 20"/><path d="M2 10 9 20"/></svg>
+                    </div>
+                    <p class="text-base font-medium text-slate-700">Business Analysts unleashed to focus on strategic innovation and growth.</p>
+                </div>
+                <div class="card p-6 flex flex-col items-center justify-center card-orange-border">
+                    <div class="icon-box mb-3">
+                        <!-- Icon: Shield -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/></svg>
+                    </div>
+                    <p class="text-base font-medium text-slate-700">Bank operates with higher confidence in software, reducing operational risks.</p>
+                </div>
+            </div>
+            <p class="text-xl font-extrabold text-[#0C4A6E] mt-10 max-w-5xl mx-auto">
+                This is a blueprint for a smarter, more agile, and ultimately more successful group in the digital age.
+            </p>
+        </section>
+
+
+        <!-- Benefits for the Bank -->
+        <section class="mb-16">
+            <div class="section-header">
+                <h2 class="text-3xl text-[#0C4A6E]">3. Benefits</h2>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Card: Accelerated Delivery -->
+                <div class="card flex flex-col items-center text-center card-blue-border small-card">
+                    <div class="icon-box">
+                        <!-- Icon: Clock -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clock"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    </div>
+                    <h3 class="font-bold mb-1 text-gray-800">Accelerated Digital transformation</h3>
+                    <ul class="list-disc list-inside text-slate-600 text-left w-full pl-4 space-y-0.5">
+                        AI Agents automate repetitive QA tasks, drastically cutting down testing cycles. This means faster delivery of new features and products, directly aligning with Forward28's aggressive timelines.
+                    </ul>
+                </div>
+
+                <!-- Card: Superior Software Quality -->
+                <div class="card flex flex-col items-center text-center card-green-border small-card">
+                    <div class="icon-box">
+                        <!-- Icon: Shield Check -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield-check"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></svg>
+                    </div>
+                    <h3 class="font-bold mb-1 text-gray-800">Enhanced Softwared Quality</h3>
+                    <ul class="list-disc list-inside text-slate-600 text-left w-full pl-4 space-y-0.5">
+                      By generating comprehensive test cases and executing them flawlessly, AI Agents minimize human error and identify defects earlier in the development cycle. This leads to more robust, reliable, and secure banking applications.
+                    </ul>
+                </div>
+
+                <!-- Card: Optimized Resource Utilization -->
+                <div class="card flex flex-col items-center text-center card-orange-border small-card">
+                    <div class="icon-box">
+                        <!-- Icon:trending up -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trending-up"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+                    </div>
+                    <h3 class="font-bold mb-1 text-gray-800">Cost Efficiency</h3>
+                    <ul class="list-disc list-inside text-slate-600 text-left w-full pl-4 text-sm space-y-0.5">
+                        As development scales with Forward28, AI Agents can effortlessly handle increased testing volumes while maintaining consistent quality standards across all projects.
+                    </ul>
+                </div>
+                  <!-- Card: Optimized Resource Utilization -->
+                <div class="card flex flex-col items-center text-center card-orange-border small-card">
+                    <div class="icon-box">
+                        <!-- Icon:trending up -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trending-up"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+                    </div>
+                    <h3 class="font-bold mb-1 text-gray-800">Improved Risk Management</h3>
+                    <ul class="list-disc list-inside text-slate-600 text-left w-full pl-4 text-sm space-y-0.5">
+                        Higher quality software inherently reduces the risk of production issues, financial losses, and reputational damage, strengthening the bank's overall stability.
+                    </ul>
+                </div>
+                        
+            </div>
+        </section>
+<!-- Key Metrics & Quantifiable Impact -->
+        <section class="mb-16">
+            <div class="section-header">
+                <h2 class="text-3xl text-[#0C4A6E]">4. Key Metrics & Quantifiable Impact</h2>
+                <p class="text-slate-600">AgentQA 007's tangible contributions to your Forward28 success.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="metric-box card-yellow-border">
+                    <div class="metric-value yellow">60%</div>
+                    <div class="metric-label yellow">Reduced Test Cycle Time</div>
+                    <p class="text-xs text-gray-500 mt-1">Automated generation & execution.</p>
+                </div>
+                <div class="metric-box card-red-border">
+                    <div class="metric-value red">40%</div>
+                    <div class="metric-label red">Defect Reduction (Pre-Prod)</div>
+                    <p class="text-xs text-gray-500 mt-1">Early detection by AI agents.</p>
+                </div>
+                <div class="metric-box card-orange-border">
+                    <div class="metric-value orange">25%</div>
+                    <div class="metric-label orange">Cost Savings in QA Ops</div>
+                    <p class="text-xs text-gray-500 mt-1">Reduced manual effort.</p>
+                </div>
+                <div class="metric-box card-green-border">
+                    <div class="metric-value green">15 Hrs/Wk</div>
+                    <div class="metric-label green">Time Reclaimed by BAs</div>
+                    <p class="text-xs text-gray-500 mt-1">For strategic analysis & innovation.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Positive Impact on Business Analyst Role -->
+        <section class="mb-16">
+            <div class="section-header">
+                <h2 class="text-3xl text-[#0C4A6E]">5. Positive Impact: Empowering Business Analysts</h2>
+            </div>
+            <div class="flex justify-center mb-8">
+                <img src="Gemini_Generated_Image_hdvdv5hdvdv5hdvd.png" alt="Business Analyst workflow with AgentQA 007" class="w-full max-w-xl rounded-lg shadow-xl border border-sky-200">
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Card: Shifting Focus -->
+                <div class="card flex flex-col items-center text-center card-yellow-border small-card">
+                    <div class="icon-box">
+                        <!-- Icon: Target -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-target"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+                    </div>
+                    <h3 class="font-bold mb-1 text-gray-800">Strategic Focus</h3>
+                    <ul class="list-disc list-inside text-slate-600 text-left w-full pl-4 text-sm space-y-0.5">
+                       Freed from the drudgery of manual test case creation and execution, BAs can dedicate more time to strategic analysis, understanding complex business requirements, and engaging in deeper stakeholder collaboration. This allows them to truly act as catalysts for innovation within Forward28.
+                    </ul>
+                </div>
+
+                <!-- Card: Enhanced Requirement Precision -->
+                <div class="card flex flex-col items-center text-center card-blue-border small-card">
+                    <div class="icon-box">
+                        <!-- Icon: Check Circle -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 2 2 4-4"/></svg>
+                    </div>
+                    <h3 class="font-bold mb-1 text-gray-800">Enhanced Requirement Clarity</h3>
+                    <ul class="list-disc list-inside text-slate-600 text-left w-full pl-4 text-sm space-y-0.5">
+                       With AI Agents generating tests directly from user stories, BAs will receive immediate feedback on the clarity and completeness of their requirements. This fosters a continuous loop of improvement, leading to more precise and well-defined user stories.
+                    </ul>
+                </div>
+
+                <!-- Card: Increased Productivity -->
+                <div class="card flex flex-col items-center text-center card-green-border small-card">
+                    <div class="icon-box">
+                        <!-- Icon: Briefcase -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-briefcase"><rect width="20" height="14" x="2" y="7" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                    </div>
+                    <h3 class="font-bold mb-1 text-gray-800">Increased Productivity & Job Satisfaction</h3>
+                    <ul class="list-disc list-inside text-slate-600 text-left w-full pl-4 text-sm space-y-0.5">
+                       By offloading repetitive tasks, BAs can focus on more intellectually stimulating and impactful work, leading to higher job satisfaction and overall productivity.
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        
+        <!-- How Our Hackathon Use Case Works -->
+        <section class="mb-16">
+            <div class="section-header">
+                <h2 class="text-3xl text-[#0C4A6E]">6. AgentQA 007 Flow </h2>
+                <p class="text-slate-600">*(Emulated with Mock UI & Database in Hackathon Environment)*</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <!-- Step 1 Card -->
+                <div class="card w-full max-w-3xl p-6 mb-6 card-blue-border">
+                    <div class="icon-box">
+                        <!-- Icon: File Text -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-text"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-center text-gray-800">Step 1: Requirements -> Test Cases</h3>
+                    <ol class="list-decimal list-inside text-slate-600 text-left pl-4 text-sm space-y-1">
+                        <li>**AI Agent Picks User Stories from Jira:** Intelligently pulls requirements.</li>
+                        <li>**Generates Test Cases, Data, & Scripts:** Creates comprehensive scenarios, realistic data, and executable scripts.</li>
+                        <li>**Writes Back to Jira:** Stores generated artifacts for transparent tracking.</li>
+                    </ol>
+                </div>
+
+                <div class="flow-arrow">
+                    &darr;
+                </div>
+
+                <!-- Step 2 Card -->
+                <div class="card w-full max-w-3xl p-6 card-green-border">
+                    <div class="icon-box">
+                        <!-- Icon: Play Circle -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-play-circle"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-center text-gray-800">Step 2: Test Case Execution & Reporting</h3>
+                    <ol class="list-decimal list-inside text-slate-600 text-left pl-4 text-sm space-y-1">
+                        <li>**AI Agent Executes Scripts Autonomously:** Runs tests seamlessly.</li>
+                        <li>**Captures Detailed Results & Logs:** Records pass/fail, performance, and granular logs.</li>
+                        <li>**Analyzes & Summarizes Results:** Provides intelligent summaries and identifies critical issues.</li>
+                        <li>**Writes Results to Jira:** Delivers real-time updates on quality health.</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+    </div>
+</body>
+</html>
